@@ -1,9 +1,14 @@
 from flask import Flask, request, jsonify, abort
 from datedetective import DateDetective
 from werkzeug.exceptions import HTTPException
+from flask_cors import CORS
+from datetime import datetime
+import re
+
 
 dd = DateDetective()
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/api/format", methods=["POST"])
 def format():
@@ -14,7 +19,7 @@ def format():
         abort(400, description="Missing 'date' parameter")
     
     date_format = dd.get_format(date_str)
-    
+
     return jsonify({"date_format": date_format})
 
 
@@ -22,7 +27,6 @@ def format():
 def handle_exception(error):
     # checks error is a http excaption
     if isinstance(error, HTTPException):
-        
         response = {
             "error": error.name,
             "message": error.description,
