@@ -29,6 +29,10 @@
   overflow: hidden;
 }
 
+.label_for_input {
+  margin-top: 0.1rem;
+}
+
 .detect_container {
   display: grid;
   grid-template-columns: auto;

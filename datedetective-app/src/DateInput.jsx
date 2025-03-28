@@ -7,7 +7,7 @@ function DateInput({ inputDate, setInputDate, detectFormat }) {
 
   return (
     <div className="detect_container">
-      <label htmlFor="input_date" className="format_box_label">
+      <label htmlFor="input_date" className="format_box_label label_for_input">
         Input date string here...
       </label>
       <input
