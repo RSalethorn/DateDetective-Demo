@@ -2,8 +2,8 @@ from flask import Flask, request, jsonify, abort
 from datedetective import DateDetective
 from werkzeug.exceptions import HTTPException
 from flask_cors import CORS
-from datetime import datetime
-import re
+
+from tag_date import tag_date
 
 
 dd = DateDetective()
@@ -13,14 +13,20 @@ CORS(app)
 @app.route("/api/format", methods=["POST"])
 def format():
     date_str = request.form.get('date')
+    return_tagged = request.form.get('tag')
 
     # if request body doesn't have 'date' parameter
     if not date_str:
         abort(400, description="Missing 'date' parameter")
     
     date_format = dd.get_format(date_str)
+    
+    response = {"date_format": date_format}
 
-    return jsonify({"date_format": date_format})
+    if bool(return_tagged) == True:
+        response["date_tagged"] = tag_date(date_str, date_format)
+        
+    return jsonify(response)
 
 
 @app.errorhandler(Exception)
