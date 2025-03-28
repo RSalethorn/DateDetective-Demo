@@ -1,5 +1,5 @@
-import "./DetectControls.css";
-import "./TaggedDateOutput.css";
+import "../styles/demo/DetectControls.css";
+import "../styles/demo/TaggedDateOutput.css";
 
 function TaggedDateOutput({ taggedDate }) {
   const formatCodes = {

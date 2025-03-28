@@ -1,4 +1,4 @@
-import "./DetectControls.css";
+import "../styles/demo/DetectControls.css";
 import TaggedDateOutput from "./TaggedDateOutput";
 
 import { useState } from "react";

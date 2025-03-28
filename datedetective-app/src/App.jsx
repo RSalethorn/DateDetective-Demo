@@ -1,8 +1,7 @@
 import { useState } from "react";
-import "./App.css";
-import DateInput from "./DateInput";
-import FormatOutput from "./FormatOutput";
-import logo from "../public/logo.png";
+import "./styles/App.css";
+import DateInput from "./demo/DateInput";
+import FormatOutput from "./demo/FormatOutput";
 
 function App() {
   const [inputDate, setInputDate] = useState("");
@@ -51,17 +50,17 @@ function App() {
 
   return (
     <>
-      <div className="nav_bar">
+      <nav className="nav_bar">
         <h1 className="logo_text">DateDetective</h1>
         <ul className="nav_list">
           <li className="nav_item selected">Demo</li>
           <li className="nav_item">Install</li>
           <li className="nav_item">Docs</li>
         </ul>
-      </div>
+      </nav>
       <p class="page_description">
         <span class="inline_header">Try it now...</span> see how DateDetective
-        can quickly identify date formats.
+        can easily identify date formats.
       </p>
 
       <div className="demo_container">{demoElements}</div>

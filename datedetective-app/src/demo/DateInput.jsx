@@ -1,4 +1,4 @@
-import "./DetectControls.css";
+import "../styles/demo/DetectControls.css";
 
 function DateInput({ inputDate, setInputDate, detectFormat }) {
   function handleChange(e) {
