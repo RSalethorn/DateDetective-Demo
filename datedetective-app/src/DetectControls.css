@@ -5,7 +5,10 @@
   justify-self: center;
   padding: 0.75rem;
   font-size: 1.3rem;
-  margin: 2rem 0 0 0;
+  margin: 1rem 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .format_box_input {
@@ -17,13 +20,13 @@
 }
 
 .format_box_label {
-  position: absolute;
-  justify-self: center;
-  margin: 1.1rem 0 0 0;
   font-size: 1.1rem;
+  margin-top: -1.8rem;
   z-index: 1;
   background-color: white;
   padding: 0 0.2rem;
+  position: absolute;
+  overflow: hidden;
 }
 
 .detect_container {
@@ -45,6 +48,18 @@
   border-radius: 3px;
 }
 
+.detect_button:hover {
+  opacity: 85%;
+}
+
+.detect_button:active {
+  opacity: 40%;
+}
+
 .red {
   background-color: rgb(156, 44, 44);
+}
+
+.green {
+  background-color: rgb(44, 156, 100);
 }

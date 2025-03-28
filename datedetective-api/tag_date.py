@@ -25,8 +25,8 @@ def tag_date(date_str, date_format):
 
             # Add each character of recreated feature to the tagged date string list
             for c in feature_string:
-                tagged_date_str.append({"char": c, "type": date_format_split[i+1]})
+                tagged_date_str.append({"char": c, "tag": date_format_split[i+1]})
         else:
-            tagged_date_str.append({"char": date_format_split[i], "type": "untagged"})
+            tagged_date_str.append({"char": date_format_split[i], "tag": "untagged"})
 
     return tagged_date_str

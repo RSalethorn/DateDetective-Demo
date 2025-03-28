@@ -7,6 +7,7 @@ import logo from "../public/logo.png";
 function App() {
   const [inputDate, setInputDate] = useState("");
   const [outputFormat, setOutputFormat] = useState(null);
+  const [taggedDate, setTaggedDate] = useState(null);
 
   const baseURL = "http://127.0.0.1:5000";
   const formatEndpoint = "/api/format";
@@ -14,6 +15,7 @@ function App() {
   function detectFormat() {
     let data = new FormData();
     data.append("date", inputDate);
+    data.append("tag", "True");
     fetch(`${baseURL}${formatEndpoint}`, {
       method: "POST",
       body: data,
@@ -22,6 +24,7 @@ function App() {
       .then((data) => {
         console.log(data.date_format);
         setOutputFormat(data.date_format);
+        setTaggedDate(data.date_tagged);
       })
       .catch((error) => console.error("Error:", error));
   }
@@ -33,17 +36,16 @@ function App() {
         outputFormat={outputFormat}
         setOutputFormat={setOutputFormat}
         setInputDate={setInputDate}
+        taggedDate={taggedDate}
       />
     );
   } else {
     demoElements = (
-      <>
-        <DateInput
-          inputDate={inputDate}
-          setInputDate={setInputDate}
-          detectFormat={detectFormat}
-        />
-      </>
+      <DateInput
+        inputDate={inputDate}
+        setInputDate={setInputDate}
+        detectFormat={detectFormat}
+      />
     );
   }
 

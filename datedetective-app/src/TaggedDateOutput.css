@@ -1,0 +1,64 @@
+.tagged_char {
+  padding: 0 0.4rem;
+  margin: 0.2rem 0;
+}
+
+.key_tag_label {
+  font-size: 0.8rem;
+  padding: 0.2rem 0;
+  margin: 0.5rem;
+  width: 20vw;
+  max-width: 128px;
+  min-width: 54px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.key_tag_container {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tagged_char_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tag_Day {
+  background-color: #6a00ff;
+}
+
+.tag_Month {
+  background-color: #ff00ff;
+}
+
+.tag_Year {
+  background-color: #ff0040;
+}
+
+.tag_Hours {
+  background-color: #ff9500;
+}
+
+.tag_Minutes {
+  background-color: #ffff00;
+}
+
+.tag_Seconds {
+  background-color: #aaff00;
+}
+
+.tag_Microseconds {
+  background-color: #00ff15;
+}
+
+.tag_AM-PM {
+  background-color: #00ffff;
+}
+
+.tag_Timezone {
+  background-color: #0095ff;
+}
