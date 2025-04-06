@@ -9,6 +9,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  background-color: #f5eded;
 }
 
 .format_box_input {
@@ -23,7 +24,7 @@
   font-size: 1.1rem;
   margin-top: -1.8rem;
   z-index: 1;
-  background-color: white;
+  background-color: #f5eded;
   padding: 0 0.2rem;
   position: absolute;
   overflow: hidden;
@@ -38,6 +39,7 @@
   grid-template-columns: auto;
   justify-items: center;
   row-gap: 0.75rem;
+  position: relative;
 }
 
 .detect_button {
