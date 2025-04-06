@@ -1,0 +1,32 @@
+.body {
+  display: flex;
+  justify-content: center;
+}
+
+.docs_container {
+  width: 85vw;
+  text-align: left;
+  max-width: 800px;
+  margin-bottom: 2rem;
+}
+
+table,
+th,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 0.3rem 0.6rem;
+}
+
+table {
+  width: 85vw;
+  max-width: 800px;
+}
+
+a {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+}

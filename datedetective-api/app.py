@@ -27,7 +27,7 @@ def format():
         response["date_tagged"] = tag_date(date_str, date_format)
         
     return jsonify(response)
-
+ 
 
 @app.errorhandler(Exception)
 def handle_exception(error):
@@ -45,4 +45,4 @@ def handle_exception(error):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True, host="0.0.0.0")

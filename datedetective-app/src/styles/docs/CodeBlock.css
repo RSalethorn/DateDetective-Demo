@@ -1,0 +1,11 @@
+.code_line {
+  display: block;
+  color: #7cbbe6;
+  padding: 0.1rem 0;
+}
+
+.code_block_container {
+  background-color: #37373d;
+  padding: 0.3rem 5%;
+  margin: 0 5% 0 5%;
+}
